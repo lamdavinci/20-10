@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    
+    <title>Chuc mung ngay 20/10</title>
+
+    <link type="text/css" rel="stylesheet" href="./asset/style.css?v=105">
+    <script type="text/javascript" src="./asset/jquery.min.js?v=105"></script>
+    <script type="text/javascript" src="./asset/jscex.min.js?v=105"></script>
+    <script type="text/javascript" src="./asset/jscex-parser.js?v=105"></script>
+    <script type="text/javascript" src="./asset/jscex-jit.js?v=105"></script>
+    <script type="text/javascript" src="./asset/jscex-builderbase.min.js?v=105"></script>
+    <script type="text/javascript" src="./asset/jscex-async.min.js?v=105"></script>
+    <script type="text/javascript" src="./asset/jscex-async-powerpack.min.js?v=105"></script>
+    <script type="text/javascript" src="./asset/functions.js?v=105" charset="utf-8"></script>
+    <script type="text/javascript" src="./asset/love.js?v=105" charset="utf-8"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap');
+
+        /*
+          THAY ĐỔI: Sửa lại body, cho phép cuộn
+        */
+        body {
+            background-image: url('https://images.unsplash.com/photo-1518707664871-0d354d763c3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%D%D&auto=format&fit=crop&w=1770&q=80') !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            font-family: 'Quicksand', sans-serif !important;
+            margin: 0;
+            /* file style.css gốc đã có "overflow: auto" nên sẽ tự có thanh cuộn */
+        }
+
+        .petals-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; 
+            overflow: hidden;
+            z-index: 10; 
+            transition: opacity 0.5s ease-out;
+        }
+
+        .petal {
+            position: absolute;
+            background: rgba(255, 182, 193, 0.7);
+            border-radius: 50% 0;
+            width: 15px;
+            height: 20px;
+            opacity: 0;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        }
+
+        .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px 50px;
+            text-align: center;
+            color: #333;
+            max-width: 500px;
+            width: 90vw;
+            box-sizing: border-box; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            opacity: 1;
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            pointer-events: auto;
+            z-index: 11;
+        }
+
+        .card.hidden {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+            pointer-events: none;
+        }
+        .petals-container.hidden {
+            opacity: 0;
+        }
+
+        .card h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #d81b60;
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        .card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #222;
+            margin-top: 20px;
+        }
+
+        /*
+          THAY ĐỔI: Đã xóa các quy tắc #main và #wrap
+          để cho file style.css gốc tự xử lý
+        */
+        
+        @media (max-width: 600px) {
+            .card {
+                padding: 30px 20px;
+            }
+            .card h1 {
+                font-size: 2.5rem;
+            }
+            .card p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="petals-container" id="petals-container"></div>
+    
+    <div class="card" id="card-20-10">
+        <h1>Chúc Mừng 20/10</h1>
+        <p>
+            Nhân ngày Phụ nữ Việt Nam , xin gửi lời chúc tốt đẹp nhất đến một nửa thế giới.
+            Chúc một nửa thế giới luôn duyên dáng, mạnh khỏe và tỏa sáng theo cách riêng của mình.
+        </p>
+        <p style="font-size: 0.9rem; margin-top: 30px; color: #555;">(Bấm để xem điều bất ngờ)</p>
+    </div>
+        
+    <div id="main">
+        <div id="wrap"> 
+            <div id="text" style="font-family:'Dancing Script', cursive;">
+                <div id="code">
+                    <font color="#000"><span class="say">Mừng ngày 20 tháng 10!</span><br>
+                        <span class="say"> </span><br>
+                        <span class="say">Xin gửi lời tri ân và những bó hoa tươi thắm nhất đến tất cả những người bà, người mẹ, người chị, người em - những người phụ nữ tuyệt vời của Việt Nam.</span><br>
+                        <span class="say">Chúc chị em phụ nữ một ngày 20/10 thật ý nghĩa, ngập tràn niềm vui và những nụ cười hạnh phúc.</span><br>
+                        <span class="say">Mong rằng không chỉ hôm nay, mà 365 ngày trong năm, phái đẹp đều luôn được yêu thương, trân trọng và tỏa sáng theo cách riêng của mình. </span><br>
+                        <span class="say">Hãy luôn vui vẻ nhé! </span><br>
+                        <span class="say"><span class="space"><img width="100px" height="100px" src="image/doahoa.png" alt=""><br> <span class="say">From Ngoc Tung Lam with love♡ </span><br>
+                    </font>
+                    </div>
+            </div>
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+    </div>
+
+    <audio id="myAudio" loop>
+        <source src="music/nhac.mp3" type="audio/mp3" />
+    </audio>
+
+    <script>
+        const petalsContainer = document.getElementById('petals-container');
+        const numberOfPetals = 50;
+        for (let i = 0; i < numberOfPetals; i++) {
+            let petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.left = `${Math.random() * 100}vw`; 
+            petal.style.animationDelay = `${Math.random() * 10}s`; 
+            petal.style.width = `${Math.random() * 5 + 10}px`; 
+            petal.style.height = `${Math.random() * 8 + 12}px`; 
+            petal.style.animationDuration = `${Math.random() * 5 + 7}s`;
+            petal.style.setProperty('--random-drift', Math.random() * 2 - 1);
+            petalsContainer.appendChild(petal);
+        }
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const card = document.getElementById('card-20-10');
+            const petals = document.getElementById('petals-container');
+            const audio = document.getElementById('myAudio');
+            const clickTarget = document; 
+
+            function hideOverlayOnClick() {
+                if (card && !card.classList.contains('hidden')) { 
+                    card.classList.add('hidden');
+                    if (petals) petals.classList.add('hidden');
+                    
+                    setTimeout(() => {
+                        if (card) card.remove();
+                        if (petals) petals.remove();
+                    }, 500); 
+
+                    if (audio) {
+                        audio.play().catch(error => console.log("Trình duyệt chặn tự động phát nhạc:", error));
+                    }
+
+                    if (typeof window.startTreeAnimation === 'function') {
+                        window.startTreeAnimation().start();
+                    }
+                 
+                    clickTarget.removeEventListener('click', hideOverlayOnClick, { capture: true });
+                }
+            }
+            
+            clickTarget.addEventListener('click', hideOverlayOnClick, { capture: true, once: true }); 
+        });
+    </script>
+    
+    <script src="./asset/script.js?v=105"></script> 
+
+</body>
+</html>
